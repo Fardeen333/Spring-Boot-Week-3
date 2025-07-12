@@ -44,28 +44,28 @@ class JpatutsApplicationTests {
 
 //		List<ProductEntity> all = productRepository.findByQuantityGreaterThanOrPriceLessThan(12, BigDecimal.valueOf(123.45));
 
-		List<ProductEntity> all = productRepository.findByTitleLike("%ver%");
-
-		System.out.println(all);
+//		List<ProductEntity> all = productRepository.findByTitleLike("%ver%");
+//
+//		System.out.println(all);
 
 	}
 	
 	@Test
 	void findUsingOptional(){
-		Optional<ProductEntity> item = productRepository.findByTitleAndPrice("Beverage", BigDecimal.valueOf(10.00));
-		item.ifPresent((entity) -> System.out.println(entity));
+//		Optional<ProductEntity> item = productRepository.findByTitleAndPrice("Beverage", BigDecimal.valueOf(10.00));
+//		item.ifPresent((entity) -> System.out.println(entity));
 	}
 
 	@Test
 	void findUsingOptional2(){
-		Optional<ProductEntity> item = productRepository.findByTitleAndPriceNative("Beverage", BigDecimal.valueOf(10.00));
-		item.ifPresent((entity) -> System.out.println(entity));
+//		Optional<ProductEntity> item = productRepository.findByTitleAndPriceNative("Beverage", BigDecimal.valueOf(10.00));
+//		item.ifPresent((entity) -> System.out.println(entity));
 	}
 
 	@Test
 	void findUsingOptional3(){
-		Optional<ProductEntity> item = productRepository.findByTitleAndPriceNamedParams("Beverage", BigDecimal.valueOf(10.00));
-		item.ifPresent((entity) -> System.out.println(entity));
+//		Optional<ProductEntity> item = productRepository.findByTitleAndPriceNamedParams("Beverage", BigDecimal.valueOf(10.00));
+//		item.ifPresent((entity) -> System.out.println(entity));
 	}
 
 
