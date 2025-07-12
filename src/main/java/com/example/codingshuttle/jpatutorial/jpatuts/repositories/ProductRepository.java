@@ -1,6 +1,9 @@
 package com.example.codingshuttle.jpatutorial.jpatuts.repositories;
 
 import com.example.codingshuttle.jpatutorial.jpatuts.entities.ProductEntity;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
@@ -42,4 +45,8 @@ public interface ProductRepository extends JpaRepository<ProductEntity, Long> {
 
     @Query(value="SELECT * from product_table WHERE title_x=:title and price=:price", nativeQuery = true)    // this is the SQL
     Optional<ProductEntity> findByTitleAndPriceNative(String title, BigDecimal price);
+
+    List<ProductEntity> findAllByOrderByPrice();
+
+    List<ProductEntity> findAllBy(Pageable pageable);
 }

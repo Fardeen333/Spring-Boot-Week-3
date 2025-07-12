@@ -23,15 +23,15 @@ class JpatutsApplicationTests {
 
 	@Test
 	void saveEntity() {
-		ProductEntity productEntity = ProductEntity.builder()
-				.sku("nestle1234").
-				title("Nestle Chocolate")
-				.price(BigDecimal.valueOf(125.45))
-				.quantity(12)
-				.build();
-
-		ProductEntity savedEnitity = productRepository.save(productEntity);
-		System.out.println(savedEnitity);
+//		ProductEntity productEntity = ProductEntity.builder()
+//				.sku("nestle1234").
+//				title("Nestle Chocolate")
+//				.price(BigDecimal.valueOf(125.45))
+//				.quantity(12)
+//				.build();
+//
+//		ProductEntity savedEnitity = productRepository.save(productEntity);
+//		System.out.println(savedEnitity);
 	}
 
 	@Test
